@@ -221,14 +221,14 @@ class PostController extends Controller
         DB::table('blogs')
             ->insert([
              'judul_blog'    =>$request->judul_blog,
-             'waktu'       =>$request->waktu,
              'isi'           =>$request->isi,
              'isi_thumbnail' =>$request->isi_thumbnail,
              'foto'          =>$imageName,
+             'waktu'         =>$request->waktu,
             ]);
             return redirect()->back()->with('success', 'Berhasil DiTambahkan');
     }
-
+ 
     public function update_blog (Request $request){
         if($request->foto == null){
             DB::table('blogs')->where('id',$request->id)
