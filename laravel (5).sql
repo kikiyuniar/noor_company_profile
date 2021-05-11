@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Bulan Mei 2021 pada 04.56
+-- Waktu pembuatan: 11 Bulan Mei 2021 pada 05.55
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.3.18
 
@@ -38,15 +38,6 @@ CREATE TABLE `blogs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data untuk tabel `blogs`
---
-
-INSERT INTO `blogs` (`id`, `judul_blog`, `slug_judul`, `isi`, `isi_thumbnail`, `foto`, `waktu`, `created_at`, `updated_at`) VALUES
-(7, 'satu', '', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572237.jpg', '2021-05-09', NULL, NULL),
-(8, 'dua', '', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '<p>Kemudian buat bootstrap master template dengan mengetikan&nbsp;b4-&nbsp;nanti pilih yang&nbsp;b4-$, ini akan bisa jika kalau memakai vscode dengan extension bootstrap4 snippets. Atau kalao selain vscode ketikan dibawah ini</p>', '1620572264.jpg', '2021-05-09', NULL, NULL),
-(9, 'tiga', '', '<p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning. Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full correctness of all content. While using W3Schools, you agree to have read and accepted our&nbsp;<a href=\"https://www.w3schools.com/about/about_copyright.asp\">terms of use</a>,&nbsp;<a href=\"https://www.w3schools.com/about/about_privacy.asp\">cookie and privacy</a></p>', '<p>adang saya membutuhkan query untuk memanggil data terbaru dari tabel MySQL. Tapi, sering lupa. Berikut ini saya jelaskan tentang penggunaan query MySQL untuk menampilkan data terbaru sekaligus untuk catatan pribadi buat saya kalau besok lupa lagi.</p>', '1620574779.png', '2021-05-09', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -199,15 +190,6 @@ CREATE TABLE `post_album` (
   `created_at` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data untuk tabel `post_album`
---
-
-INSERT INTO `post_album` (`id`, `judul_album`, `foto_album`, `status`, `updated_at`, `created_at`) VALUES
-(1, 'kunam', '1617561493.png', 'Tampilkan', '2021-04-04 18:38:13', '2021-04-04 18:38:13'),
-(4, 'Album januarin 2022', '1618761465.jpg', 'Tampilkan', '2021-04-18 15:57:45', '2021-04-18 15:57:45'),
-(5, 'sampul', '1619931619.jpg', 'Tampilkan', '2021-05-02 05:00:19', '2021-05-02 05:00:19');
-
 -- --------------------------------------------------------
 
 --
@@ -225,19 +207,6 @@ CREATE TABLE `post_project` (
   `updated_at` varchar(100) NOT NULL,
   `created_at` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `post_project`
---
-
-INSERT INTO `post_project` (`id`, `judul_project`, `isi`, `waktu`, `bahasa`, `foto`, `status`, `updated_at`, `created_at`) VALUES
-(9, 'Project 1', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945671.jpg', 'Tampilkan', '2021-05-02 08:54:31', '2021-05-02 08:54:31'),
-(10, 'project 2', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945862.jpg', 'Tampilkan', '2021-05-02 08:57:42', '2021-05-02 08:57:42'),
-(11, 'project 3', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945883.jpg', 'Tampilkan', '2021-05-02 08:58:03', '2021-05-02 08:58:03'),
-(12, 'project 4', '<p>Experienced in working on energy projects that are spread throughout Indonesia based on solar energy. With commitment and passionate, we have had ongoing projects from several of our experienced team personnel. Currently more than 38 MW spread across 30 locations in East Java, Central Java, Bali and NTT have worked with us, which includes factories, hotels and malls, and also for investment projects / Independent Power Producers (IPP)</p>', '2021-05-02', 'Indonesia', '1619945973.jpg', 'Sembunyikan', '2021-05-02 08:59:33', '2021-05-02 08:59:33'),
-(13, 'menocba projek 5', '<p>bagaimana nggak jelas kan, tapi cakeplah dah kaya apa gitu. Selanjutnya tuangkan kreatifitasmu terus dan asah kemampuanmu.</p>', '2021-05-08', 'Indonesia', '1620407566.jpg', 'Sembunyikan', '2021-05-07 17:12:46', '2021-05-07 17:12:46'),
-(14, 'project 6', '<p>bagaimana nggak jelas kan, tapi cakeplah dah kaya apa gitu. Selanjutnya tuangkan kreatifitasmu terus dan asah kemampuanmu.</p>', '2021-05-08', 'Indonesia', '1620407588.png', 'Sembunyikan', '2021-05-07 17:13:08', '2021-05-07 17:13:08'),
-(15, 'project 7', '<p>bagaimana nggak jelas kan, tapi cakeplah dah kaya apa gitu. Selanjutnya tuangkan kreatifitasmu terus dan asah kemampuanmu.</p>', '2021-05-08', 'Indonesia', '1620407615.jpg', 'Sembunyikan', '2021-05-07 17:13:35', '2021-05-07 17:13:35');
 
 -- --------------------------------------------------------
 
@@ -263,9 +232,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `status`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Noor Energi Baik', 'noor@gmail.com', NULL, '$2y$10$x..nztfVJm.1Ls2vdk0OHuRB20uuL37mysf8RwNvoriVyPQG.bgYu', 'Super Admin', '1620569717.png', 'UAJIFRIJQaWocXOqEaK9n0dAAjQOPH82qXMtu7HQd8DxjzdUWA4d5WcWrd0t', '2021-04-10 20:59:42', '2021-04-10 20:59:42'),
-(4, 'Rama S.Kom', 'ramaandikajorgie@gmail.com', NULL, '$2y$10$vqZ1IaKcgIFi1/7FCEih1e2afHJMQKNhmIWFvHrNfWK/gbp09sQyu', 'Admin', '1619080158.jpg', NULL, NULL, NULL),
-(6, 'Kiki Yuniar', 'kkikiyuniar@yahoo.co.id', NULL, '$2y$10$YRAf8xBlyuehxC3iSq59xOpAhM/0/c7w778lhiVEBWCKK/nn7mSPC', 'Admin', '1619932667.png', NULL, NULL, NULL);
+(1, 'Noor Energi Baik', 'noor@gmail.com', NULL, '$2y$10$x..nztfVJm.1Ls2vdk0OHuRB20uuL37mysf8RwNvoriVyPQG.bgYu', 'Super Admin', '1620569717.png', 'UAJIFRIJQaWocXOqEaK9n0dAAjQOPH82qXMtu7HQd8DxjzdUWA4d5WcWrd0t', '2021-04-10 20:59:42', '2021-04-10 20:59:42');
 
 -- --------------------------------------------------------
 
