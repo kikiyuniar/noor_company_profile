@@ -12,6 +12,7 @@
           <div class="col-xl-12">
             <div class="section-title text-center mb-55">
               <span class="wow fadeInDown" data-wow-delay=".2s">Contact Us</span>
+              <p>At PT. Noor Energi Baik, customer satisfaction is very important to us. We are always looking for ways to improve our service and products</p>
             </div>
           </div>
         </div>
