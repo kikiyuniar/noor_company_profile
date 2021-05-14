@@ -28,12 +28,16 @@
               </div>
               <div class="blog-content">
                 <h4><a href="#">{{ $item->judul_blog }}</a></h4>
+                <!-- <p>{!! nl2br($item->isi) !!}</p> -->
+                <!-- <a class="read-more" href="/baca/{{ $item->slug_judul}}">Read More <i class="lni lni-arrow-right"></i></a> -->
                 <p>{!! nl2br($item->isi_thumbnail) !!}</p>
-                <form action="/detail_blog" method="get">
+                <a class="read-more" href="/baca/{{ $item->slug_judul}}">Read More <i class="lni lni-arrow-right"></i></a>
+                <!-- <form action="/detail_blog" method="get">
                   @csrf
                   <input type="text" value="{{$item->id}}" name="id" hidden>
                 <button style="background-color: rgba(255, 255, 255, 0); background-repeat:no-repeat;border: none;cursor:pointer; overflow: hidden;" type="submit" class="read-more">Read More <i class="lni lni-arrow-right"></i></button>
-                </form>
+                </form> -->
+
               </div>
             </div>
           </div>

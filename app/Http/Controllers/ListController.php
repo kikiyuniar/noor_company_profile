@@ -75,8 +75,16 @@ class ListController extends Controller
         return view('page_layout.blog_view_edit',['data' => $view_edit_blog]);
     }
 
-    public function detail_blogs(Request $request){
-        $detail_blog = DB::table('blogs')->where('id',$request->id)->get();
+
+    public function baca_blog(Request $request)
+    {
+        $detail_blog = DB::table('blogs')->where('slug_judul',$request->slug_judul)->get();
+       
         return view('detail_blogs.detail_blog',['detail'=>$detail_blog]);
     }
+    // public function detail_blogs(Request $request){
+    //     $detail_blog = DB::table('blogs')->where('id',$request->id)->get();
+    //     return view('detail_blogs.detail_blog',['detail'=>$detail_blog]);
+
+    // }
 } 

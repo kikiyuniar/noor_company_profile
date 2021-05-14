@@ -28,6 +28,21 @@ Route::get('/about', [PostController::class,'about']);
 Route::get('/project',[PostController::class, 'view_project_front']);
 Route::get('/blog',[PostController::class, 'view_blog_front']);
 // Route::get('/blog', function () {
+//     return view('page_view.blog');
+// });
+Route::get('/contact', function () {
+    return view('page_view.contact');
+});
+Route::get('/bussiness', function () {
+    return view('page_view.bussiness');
+});
+Route::get('/login', function () {
+    return view('home.login');
+});
+
+Route::get('/baca/{slug_judul}',[ListController::class, 'baca_blog']);
+
+Route::post('login', [LoginController::class, 'login'])->name('login');
     //     return view('page_view.blog');
     // });
     Route::get('/contact', function () {
@@ -89,4 +104,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/add_blog', function () {return view('page_layout.form_blog');});
     Route::get('/view_blog',[PostController::class, 'view_blog']);
     Route::post('/proses_add_blog',[PostController::class, 'add_blog']);
+
+   
 });
