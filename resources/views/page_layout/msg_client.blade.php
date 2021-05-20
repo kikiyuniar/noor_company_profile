@@ -48,11 +48,7 @@
                                                             </td>
                                                             <td>
                                                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilka->id}}" data-bs-whatever="@mdo">Lihat</button>
-                                                                <form action="/delete_msg" method="get">
-                                                                    @csrf
-                                                                    <input type="text" name="id" value="{{$tampilka->id}}" hidden>
-                                                                    <button class="btn btn-danger" type="submit">Delete</button>
-                                                                </form>
+                                                                <a href="/delete_msg/{{ $tampilka->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                                             </td>
                                                         @elseif ($tampilka->status == 'Terbaca')
                                                             <td>{{$tampilka->nama}}</td>
