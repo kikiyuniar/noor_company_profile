@@ -68,6 +68,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/add_msg',[Msg_Controller::class, 'add_msg']);
     Route::get('/view_msg',[Msg_Controller::class, 'view_msg']);
     Route::post('/read_msg',[Msg_Controller::class, 'read_msg']);
+    Route::get('/delete_msg/{id}',[Msg_Controller::class, 'del_msg']);
     Route::post('/insert_postproject',[PostController::class, 'post_project']);
     Route::post('/insert_postabout',[PostController::class, 'post_about']);
     Route::post('/insert_postalbum',[PostController::class, 'post_album']);

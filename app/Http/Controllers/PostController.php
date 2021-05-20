@@ -205,7 +205,7 @@ class PostController extends Controller
         return view('page_layout.blog_view',['data' => $view]);
     }
     public function view_blog_front(){
-        $views = DB::table('blogs')->get();
+        $views = DB::table('blogs')->pagination();
         $view_last_blog = DB::table('view_last_blog')->get();
         return view('page_view.blog',[
             'views_blog'=> $views,

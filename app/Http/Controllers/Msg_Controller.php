@@ -31,19 +31,21 @@ class Msg_Controller extends Controller
     }
 
     public function read_msg (Request $request){
-
        
         DB::table('contact')->where('id', $request->id)
          ->update([
           'status' => 'Terbaca',
-
          ]);
 
          $total_pesan = DB::table('contact')->where('status','Belum Terbaca')->count();
 
-
         session(['login_msg'=>$total_pesan]);
 
+        return redirect()->back();
+    }
+
+    public function del_msg(Request $request){
+        DB::table('contact')->where('id','=', $request->id)->delete();
         return redirect()->back();
     }
     

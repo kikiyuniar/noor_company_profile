@@ -24,7 +24,7 @@
                                                             <!-- <th>Massage</th> -->
                                                             <th>Status</th>
                                                             <th>Tandai</th>
-                                                            <th>Lihat</th>
+                                                            <th>Action</th>
                                                             
                                                         </tr>
                                                     </thead>
@@ -46,7 +46,14 @@
                                                             <button class="btn btn-success" type="submit">Baca</button>
                                                             </form>
                                                             </td>
-                                                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilka->id}}" data-bs-whatever="@mdo">Lihat</button></td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilka->id}}" data-bs-whatever="@mdo">Lihat</button>
+                                                                <form action="/delete_msg" method="get">
+                                                                    @csrf
+                                                                    <input type="text" name="id" value="{{$tampilka->id}}" hidden>
+                                                                    <button class="btn btn-danger" type="submit">Delete</button>
+                                                                </form>
+                                                            </td>
                                                         @elseif ($tampilka->status == 'Terbaca')
                                                             <td>{{$tampilka->nama}}</td>
                                                             <td>{{$tampilka->email}}</td>
@@ -55,10 +62,12 @@
                                                             <td>{{$tampilka->status}}</td>
                                                             <td>
                                                             </td>
-                                                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilka->id}}" data-bs-whatever="@mdo">Lihat</button></td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal{{$tampilka->id}}" data-bs-whatever="@mdo">Lihat</button>
+                                                                <a href="/delete_msg/{{ $tampilka->id}}" class="delete"><i class="material-icons " style="color: red;" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                            </td>
                                                         @endif
                                                         </tr>
-                                                       
 
                                                     </tbody>
                                                     @endforeach
