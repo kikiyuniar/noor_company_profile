@@ -200,7 +200,6 @@ class PostController extends Controller
     }
 
     public function view_blog(){
-
         $view = DB::table('blogs')->get();
         return view('page_layout.blog_view',['data' => $view]);
     }
@@ -256,5 +255,18 @@ class PostController extends Controller
         }
     
         return redirect()->back()->with('success', 'Berhasil Di Update');
+    }
+
+    public function dashboard(){
+        $blog = DB::table('count_blogs')->get();
+        $user = DB::table('count_users')->get();
+        $msg = DB::table('count_msg')->get();
+        $pjc = DB::table('count_project')->get();
+        return view('page_layout.dashboard',[
+            'blog' => $blog,
+            'user' => $user,
+            'msg' => $msg,
+            'project' => $pjc
+            ]);
     }
 }

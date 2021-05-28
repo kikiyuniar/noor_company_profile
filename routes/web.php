@@ -93,7 +93,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/update_about_gambar',[PostController::class, 'update_about_gambar']);
     Route::get('/post_project', function () {return view('page_layout.form_postproject');});
     Route::get('/post_album', function () {return view('page_layout.form_postalbum');});
-    Route::get('/dashboard', function () {return view('page_layout.dashboard');});
+    // Route::get('/dashboard', function () {return view('page_layout.dashboard');});
+    Route::get('/dashboard',[PostController::class, 'dashboard']);
     Route::post('/insert_postproject',[PostController::class, 'post_project']);
     Route::post('/insert_postabout',[PostController::class, 'post_about']);
     Route::post('/insert_postalbum',[PostController::class, 'post_album']);
